@@ -1,0 +1,60 @@
+---
+layout: default
+title: Games
+eyebrow: Our Catalog
+subtitle: "{{ site.data.games | size }} online multiplayer card & board games for Android"
+---
+
+<div class="page-header">
+  <div class="eyebrow">Our Catalog</div>
+  <h1 style="font-size:clamp(1.9rem,4vw,3rem)">All Games</h1>
+  <p>{{ site.data.games | size }} online multiplayer card &amp; board games for Android</p>
+</div>
+
+<main>
+  <div class="section">
+
+    <div class="section-head">
+      <div class="eyebrow">Card Games</div>
+      <h2>Classic &amp; original card games</h2>
+    </div>
+    <div class="games-grid">
+      {% for game in site.data.games %}
+      {% if game.category == 'card' %}
+      <a href="{{ game.play_url }}" target="_blank" class="game-card">
+        <div class="gcard-icon {% if game.icon_bg == 'vanilla' %}vanilla{% elsif game.icon_bg == 'mint' %}mint{% endif %}">{{ game.icon }}</div>
+        <div class="gcard-name">{{ game.name }}</div>
+        <p class="gcard-desc">{{ game.description }}</p>
+        <div class="gcard-foot">
+          <span class="gcard-rating">★ {{ game.rating }}</span>
+          <span class="gcard-tag {{ game.tag_style }}">{{ game.tag }}</span>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <div style="margin-top:4rem;padding-top:4rem;border-top:1px solid var(--border)">
+      <div class="section-head">
+        <div class="eyebrow">Board Games</div>
+        <h2>Board &amp; tile games</h2>
+      </div>
+      <div class="games-grid">
+        {% for game in site.data.games %}
+        {% if game.category == 'board' %}
+        <a href="{{ game.play_url }}" target="_blank" class="game-card">
+          <div class="gcard-icon {% if game.icon_bg == 'vanilla' %}vanilla{% elsif game.icon_bg == 'mint' %}mint{% endif %}">{{ game.icon }}</div>
+          <div class="gcard-name">{{ game.name }}</div>
+          <p class="gcard-desc">{{ game.description }}</p>
+          <div class="gcard-foot">
+            <span class="gcard-rating">★ {{ game.rating }}</span>
+            <span class="gcard-tag {{ game.tag_style }}">{{ game.tag }}</span>
+          </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</main>

@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  {% if page.eyebrow %}<div class="eyebrow">{{ page.eyebrow }}</div>{% endif %}
+  <h1 style="font-size:clamp(1.9rem,4vw,3rem)">{{ page.title }}</h1>
+  {% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
+</div>
+
+<main>
+  {{ content }}
+</main>

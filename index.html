@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+<main>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <div class="hero-badge">♠ ♥ ♦ ♣ &nbsp;Indie Game Studio</div>
+      <h1 class="hero-title">{{ site.data.settings.tagline | split: ' ' | slice: 0, 3 | join: ' ' }}<br><em>{{ site.data.settings.tagline | split: ' ' | slice: 3, 10 | join: ' ' }}</em></h1>
+      <p class="hero-sub">{{ site.data.settings.description }}</p>
+      <div class="btn-row">
+        <a href="/games/" class="btn btn-primary">Browse Our Games</a>
+        <a href="/contact/" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-cards">
+      {% for game in site.data.games limit:4 %}
+      <div class="hcard">
+        <span class="suit" style="{% if forloop.index == 1 or forloop.index == 2 %}color:#C95070{% else %}color:#2C1810{% endif %}">{{ game.icon }}</span>
+        <div class="gname">{{ game.name }}</div>
+        <div class="grating">★ {{ game.rating }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="section" style="padding-top:0">
+    <div class="stats-row">
+      <div class="stat-card">
+        <span class="stat-num">{{ site.data.settings.games_count }}</span>
+        <div class="stat-lbl">Games Published</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">{{ site.data.settings.avg_rating }}</span>
+        <div class="stat-lbl">Average Rating</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">100%</span>
+        <div class="stat-lbl">Online Multiplayer</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED GAMES -->
+  <div class="stripe">
+    <div class="stripe-pattern"></div>
+    <div class="section" style="position:relative">
+      <div class="section-head">
+        <div class="eyebrow">Our Games</div>
+        <h2>Featured titles</h2>
+      </div>
+      <div class="games-grid">
+        {% for game in site.data.games limit:3 %}
+        <a href="{{ game.play_url }}" target="_blank" class="game-card">
+          <div class="gcard-icon {% if game.icon_bg == 'vanilla' %}vanilla{% elsif game.icon_bg == 'mint' %}mint{% endif %}">{{ game.icon }}</div>
+          <div class="gcard-name">{{ game.name }}</div>
+          <p class="gcard-desc">{{ game.description }}</p>
+          <div class="gcard-foot">
+            <span class="gcard-rating">★ {{ game.rating }}</span>
+            <span class="gcard-tag {{ game.tag_style }}">{{ game.tag }}</span>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+      <div style="margin-top:2.5rem">
+        <a href="/games/" class="btn btn-secondary">View all {{ site.data.games | size }} games →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section">
+    <div class="about-strip">
+      <div>
+        <div class="eyebrow">About the Studio</div>
+        <h2>Small team,<br><em>big games</em></h2>
+      </div>
+      <div>
+        <div class="about-suits">♠ ♥ ♦ ♣</div>
+        <p style="color:var(--muted);font-size:1rem;margin-bottom:1.5rem">
+          We're a small indie studio with a deep love for card and board games. We build online multiplayer experiences that bring people together — whether it's a classic Persian game like Charbarg and Basra, or an international favorite like Gin Rummy or Hearts.
+        </p>
+        <p style="color:var(--muted);font-size:1rem;margin-bottom:2rem">
+          Every game we ship is crafted with care, optimized for mobile, and designed to be played with real people in real time.
+        </p>
+        <a href="/contact/" class="btn btn-primary">Get in touch</a>
+      </div>
+    </div>
+  </div>
+
+</main>

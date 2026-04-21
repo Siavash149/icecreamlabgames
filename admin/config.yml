@@ -1,0 +1,80 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/icecreamlabgames
+  branch: main
+  auth_type: pkce
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+
+  - name: "games"
+    label: "Games"
+    files:
+      - label: "All Games"
+        name: "games"
+        file: "_data/games.yml"
+        fields:
+          - label: "Games"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Icon (emoji)", name: "icon", widget: "string" }
+              - label: "Icon Background"
+                name: "icon_bg"
+                widget: "select"
+                options: ["pink", "vanilla", "mint"]
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Rating (e.g. 4.5)", name: "rating", widget: "string" }
+              - { label: "Tag label (e.g. Persian · Online)", name: "tag", widget: "string" }
+              - label: "Tag style"
+                name: "tag_style"
+                widget: "select"
+                options:
+                  - { label: "Pink (default)", value: "" }
+                  - { label: "Green", value: "tag-c" }
+                  - { label: "Yellow", value: "tag-b" }
+              - { label: "Google Play URL", name: "play_url", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Card Game", value: "card" }
+                  - { label: "Board Game", value: "board" }
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General Settings"
+        name: "settings"
+        file: "_data/settings.yml"
+        fields:
+          - { label: "Studio Name", name: "studio_name", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Support Email", name: "support_email", widget: "string" }
+          - { label: "Contact Email", name: "contact_email", widget: "string" }
+          - { label: "Play Store URL", name: "play_store_url", widget: "string" }
+          - { label: "Games Count Display (e.g. 9+)", name: "games_count", widget: "string" }
+          - { label: "Average Rating Display (e.g. 4.3★)", name: "avg_rating", widget: "string" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Privacy Policy"
+        name: "privacy"
+        file: "_pages/privacy.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Last Updated", name: "subtitle", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
+
+      - label: "Support FAQ"
+        name: "support"
+        file: "_pages/support.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }

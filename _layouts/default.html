@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.data.settings.studio_name }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.data.settings.description }}{% endif %}">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">♥</div>
+      {{ site.data.settings.studio_name }}
+    </a>
+    <ul class="nav-links">
+      <li><a href="/games/" {% if page.url contains 'games' %}class="active"{% endif %}>Games</a></li>
+      <li><a href="/support/" {% if page.url contains 'support' %}class="active"{% endif %}>Support</a></li>
+      <li><a href="/contact/" {% if page.url contains 'contact' %}class="active"{% endif %}>Contact</a></li>
+      <li><a href="{{ site.data.settings.play_store_url }}" target="_blank" class="nav-cta">Play Store ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+{{ content }}
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="/" class="footer-logo"><span class="suit">♥</span> {{ site.data.settings.studio_name }}</a>
+      <div class="footer-copy">© {{ 'now' | date: "%Y" }} {{ site.data.settings.studio_name }}. All rights reserved.</div>
+    </div>
+    <div class="footer-links">
+      <a href="/games/">Games</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/support/">Support</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

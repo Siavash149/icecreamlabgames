@@ -1,0 +1,89 @@
+- name: Remastered Charbarg
+  icon: "🃏"
+  icon_bg: pink
+  description: The definitive online version of the beloved Persian card game Charbarg (Eleven). Polished visuals, smooth online matchmaking, and the authentic rules fans love.
+  rating: "4.5"
+  tag: "Persian · Online"
+  tag_style: ""
+  play_url: "https://play.google.com/store/apps/details?id=ir.IcecreamLab.RemasteredCharbarg"
+  category: card
+
+- name: Charbarg 11
+  icon: "🃏"
+  icon_bg: vanilla
+  description: The original Charbarg — both online and offline modes. Play solo against AI or challenge friends in real-time multiplayer matches.
+  rating: "4.4"
+  tag: "Persian · Offline+Online"
+  tag_style: ""
+  play_url: "https://play.google.com/store/apps/details?id=ir.sinsin.IranianCharBarg"
+  category: card
+
+- name: Charbarg Online
+  icon: "🃏"
+  icon_bg: mint
+  description: Another take on the classic — streamlined for quick online sessions. Jump in, match with players, and play a hand of Charbarg anywhere.
+  rating: "4.2"
+  tag: "Persian · Online"
+  tag_style: ""
+  play_url: "https://play.google.com/store/apps/details?id=ir.sinsin.NewCharBarg"
+  category: card
+
+- name: Classic Hearts
+  icon: "♥"
+  icon_bg: pink
+  description: The timeless trick-taking game, fully online. Avoid hearts and the Queen of Spades — or shoot the moon. Clean UI, real opponents, real fun.
+  rating: "4.5"
+  tag: "Classic · Online"
+  tag_style: "tag-c"
+  play_url: "https://play.google.com/store/apps/details?id=ir.sinsin.HeartsOnline"
+  category: card
+
+- name: Dirty Seven
+  icon: "♦"
+  icon_bg: vanilla
+  description: Fast-paced card game with unique rules played with a standard deck. 5K+ downloads — one of our most popular titles. Easy to learn, endlessly replayable.
+  rating: "4.3"
+  tag: "5K+ Downloads"
+  tag_style: ""
+  play_url: "https://play.google.com/store/apps/details?id=com.icecreamlab.uno"
+  category: card
+
+- name: Gin Rummy
+  icon: "♠"
+  icon_bg: mint
+  description: The classic two-player matching card game. Form sets and runs to go out first. Clean multiplayer implementation with global matchmaking.
+  rating: "4.1"
+  tag: "Classic · Online"
+  tag_style: "tag-c"
+  play_url: "https://play.google.com/store/apps/details?id=com.icecreamlab.rummy"
+  category: card
+
+- name: Basra Online
+  icon: "♣"
+  icon_bg: pink
+  description: The popular Middle Eastern fishing card game, now fully online. Capture cards from the table and outscore your opponent. A regional classic.
+  rating: "4.0"
+  tag: "Arabic · Online"
+  tag_style: ""
+  play_url: "https://play.google.com/store/apps/details?id=com.icecreamlab.basra"
+  category: card
+
+- name: Solitaire
+  icon: "♠"
+  icon_bg: vanilla
+  description: The old Windows classic — faithful to the original. Clean, fast, and satisfying. A timeless single-player card game always worth another round.
+  rating: "3.9"
+  tag: "Single Player"
+  tag_style: "tag-c"
+  play_url: "https://play.google.com/store/apps/details?id=ir.sinsin.Solitaire"
+  category: card
+
+- name: Cafe Backgammon
+  icon: "🎲"
+  icon_bg: mint
+  description: The ancient board game in a clean, café-inspired interface. Roll the dice, move your pieces, and bear off before your opponent. Online multiplayer.
+  rating: "3.9"
+  tag: "Board · Online"
+  tag_style: "tag-b"
+  play_url: "https://play.google.com/store/apps/details?id=ir.sinsin.Backgammon"
+  category: board
