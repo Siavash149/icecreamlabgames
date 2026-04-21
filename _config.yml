@@ -1,7 +1,7 @@
 title: IcecreamLab Games
 description: Indie card & board game studio — online multiplayer card and board games for Android
 url: "https://icecreamlabgames.com"
-baseurl: ""
+baseurl: "/icecreamlabgames"
 permalink: pretty
 
 collections:
